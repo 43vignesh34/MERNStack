@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Task1</title>
+</head>
+<body>
+    <label for="id1">Enter Number: </label>
+    <input type="text" id="id1"/><br/>
+    <button onclick="rev()">Reverse</button><br/>
+    <div id="id3"></div>
+    <script>
+        function rev(){
+            var a=document.getElementById("id1").value;
+            var b = a.split('').reverse().join('');
+            document.getElementById('id3').innerHTML = "Reversed Num: " + b;
+        }
+    </script>
+</body>
+</html>

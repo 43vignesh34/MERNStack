@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <button onclick="displayDate()">View Date</button><br/><br/>
+    <div id="id1"></div>
+    <button onclick="displayTime()">View Time</button><br/><br/>
+    <div id="id2"></div>
+    <script>
+        function displayDate(){
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth()+1;
+            var year = date.getFullYear();
+            date = day+'/'+month+'/'+year;
+            document.getElementById('id1').innerHTML = date;
+        }
+        function displayTime(){
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            hours=(hours<10)?'0'+hours:hours;
+            minutes=(minutes<10)?'0'+minutes:minutes;
+            seconds=(seconds<10)?'0'+seconds:seconds;
+            date = hours+':'+minutes+':'+seconds;
+            document.getElementById('id2').innerHTML = date;
+        }
+    </script>
+</body>
+</html>

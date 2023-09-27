@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <label for="id1">Enter String: </label>
+    <input id="id1"/><br/>
+    <button onclick="sortStringAlphabetically()">Sort</button>
+    <div id="id2"></div>
+    <script>
+        function sortStringAlphabetically(){
+            var inputString = document.getElementById("id1").value;
+            inputString = inputString.toLowerCase().split('').sort().join('');
+            document.getElementById('id2').innerHTML="Result: "+inputString;
+        }
+    </script>
+</body>
+</html>
